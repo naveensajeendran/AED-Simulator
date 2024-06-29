@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1044</width>
+    <height>614</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AED</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(207, 250, 239);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="cprfeedback">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>260</y>
+      <width>331</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(246, 245, 244);
+border: 2px solid #7ea5a9;
+border-bottom-left-radius: 9px; 
+border-bottom-right-radius: 9px;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>240</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 165, 169);
+color: rgb(255, 255, 255);
+
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;
+
+</string>
+    </property>
+    <property name="text">
+     <string>CPR Feedback Area </string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>241</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 75 italic 36pt &quot;DejaVu Sans&quot;;
+
+
+border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+    </property>
+    <property name="text">
+     <string>AED Plus</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stopstart">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>360</y>
+      <width>83</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>90</y>
+      <width>131</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(224, 27, 36);
+border: 2px solid #7ea5a9;
+border-top-left-radius: 15px; 
+border-bottom-left-radius: 15px;
+background-color: rgb(246, 245, 244);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>400</y>
+      <width>701</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 165, 169);
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;
+
+border-bottom-left-radius: 9px; 
+border-bottom-right-radius: 9px;</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>50</y>
+       <width>161</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Additional Shock Test</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="oneshock_3">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>100</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Ventricular Fibrillation Detected</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="oneshock_2">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>100</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Ventricular Tachycardia Detected</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_18">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>191</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 16pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Test Senarios</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="batttest">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>50</y>
+       <width>101</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Battery Test</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="selffail">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>10</y>
+       <width>121</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Self Fail Test Off</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="asystole">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>130</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Asystole</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pea">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>130</y>
+       <width>291</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>PEA</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="electrode">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>360</y>
+      <width>83</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>electrode</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widget_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(126, 165, 169);
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;
+
+border-bottom-left-radius: 9px; 
+border-bottom-right-radius: 9px;</string>
+    </property>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>140</y>
+       <width>62</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>260</y>
+       <width>62</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>121</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>230</y>
+       <width>121</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::RichText</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>450</y>
+       <width>121</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>62</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>340</y>
+       <width>121</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>480</y>
+       <width>62</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>110</y>
+       <width>121</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border: 2px solid #000000;
+
+border-top-left-radius: 15px; 
+border-top-right-radius: 15px;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>370</y>
+       <width>62</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>0</y>
+      <width>181</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <widget class="QLabel" name="eleStat">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>130</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;DejaVu Sans&quot;;
+background-color: rgb(246, 245, 244);
+
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;
+border: 2px solid #7ea5a9;</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(126, 165, 169);
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;</string>
+     </property>
+     <property name="text">
+      <string>Electrode</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);
+background-color: rgb(126, 165, 169);
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;</string>
+     </property>
+     <property name="text">
+      <string>Elapsed Time</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="shockcount_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;DejaVu Sans&quot;;
+background-color: rgb(246, 245, 244);
+
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;
+border: 2px solid #7ea5a9;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="shockcount">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>290</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 14pt &quot;DejaVu Sans&quot;;
+background-color: rgb(246, 245, 244);
+border: 2px solid #7ea5a9;
+border-bottom-left-radius: 15px; 
+border-bottom-right-radius: 15px;</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>260</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 15pt &quot;DejaVu Sans&quot;;
+color: rgb(255, 255, 255);
+
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;
+
+
+background-color: rgb(126, 165, 169);</string>
+     </property>
+     <property name="text">
+      <string>Shock Count</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QWidget" name="widget_4" native="true">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(207, 250, 239);
+border-color:  rgb(126, 165, 169);
+</string>
+     </property>
+     <widget class="QProgressBar" name="battery">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0, 0, 0);
+border: 2px solid #7ea5a9;
+</string>
+      </property>
+      <property name="value">
+       <number>24</number>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="invertedAppearance">
+       <bool>false</bool>
+      </property>
+      <property name="textDirection">
+       <enum>QProgressBar::TopToBottom</enum>
+      </property>
+      <property name="format">
+       <string> ⚡ %p% </string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>20</y>
+      <width>21</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 75 italic 12pt &quot;DejaVu Sans&quot;;</string>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>90</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 17pt &quot;DejaVu Sans&quot;;
+border-top-right-radius: 15px; 
+border-bottom-right-radius: 15px;
+color: rgb(165, 29, 45);
+background-color: rgb(246, 245, 244);
+border: 2px solid #7ea5a9;</string>
+    </property>
+    <property name="text">
+     <string>bpm</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="graph">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>140</y>
+      <width>461</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(246, 245, 244);
+border: 6px solid #7ea5a9;
+border-top-left-radius: 9px; 
+border-top-right-radius: 9px;
+
+border-bottom-left-radius: 9px; 
+border-bottom-right-radius: 9px;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shockbttn">
+    <property name="geometry">
+     <rect>
+      <x>680</x>
+      <y>360</y>
+      <width>83</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(82, 125, 120);
+color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Shock</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1044</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
